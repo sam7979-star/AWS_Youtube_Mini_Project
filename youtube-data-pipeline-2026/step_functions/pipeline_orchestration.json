@@ -6,7 +6,7 @@
       "Type": "Task",
       "Resource": "arn:aws:states:::lambda:invoke",
       "Parameters": {
-        "FunctionName": "arn:aws:sns:eu-west-2:218852528943:function:yt-data-pipeline-youtube-ingestion-dev",
+        "FunctionName": "arn:aws:lambda:eu-west-2:218852528943:function:yt-data-pipeline-youtube-ingestion-dev",
         "Payload": {
           "triggered_by": "step_functions",
           "execution_id.$": "$$.Execution.Id"
@@ -49,7 +49,7 @@
               "Type": "Task",
               "Resource": "arn:aws:states:::lambda:invoke",
               "Parameters": {
-                "FunctionName": "arn:aws:sns:eu-west-2:218852528943:function:yt-data-pipeline-json-to-parquet-dev",
+                "FunctionName": "arn:aws:lambda:eu-west-2:218852528943:function:yt-data-pipeline-youtube-ingestion-dev",
                 "Payload": {
                   "triggered_by": "step_functions"
                 }
@@ -112,7 +112,7 @@
       "Type": "Task",
       "Resource": "arn:aws:states:::lambda:invoke",
       "Parameters": {
-        "FunctionName": "arn:aws:sns:eu-west-2:218852528943:function:yt-data-pipeline-data-quality-dev",
+        "FunctionName": "arn:aws:lambda:eu-west-2:218852528943:function:yt-data-pipeline-data-quality-dev",
         "Payload": {
           "layer": "silver",
           "database": "yt_pipeline_silver_dev",
