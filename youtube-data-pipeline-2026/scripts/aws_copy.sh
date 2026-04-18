@@ -1,0 +1,2 @@
+aws s3 cp CAVideos.csv yt-data-pipeline-bronze-eu-london-1-dev/youtube/raw_statistics/region=ca/
+aws s3 cp CA_category_id.json yt-data-pipeline-bronze-eu-london-1-dev/youtube/raw_statistics_reference_data/region=ca/
